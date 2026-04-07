@@ -1,0 +1,6 @@
+I have a legacy Flask application consisting of main.py and calendar.py. The app converts integers to Roman numerals, but it currently returns HTML templates, crashes on invalid string inputs, and fails to use subtractive Roman numeral notation (like 'IV' for 4).
+
+Please orchestrate the following concurrent tasks:
+Agent 1 (The Python Architect): Refactor calendar.py to correctly handle subtractive Roman numeral logic (IV, IX, XL, etc.). Also, update main.py to catch ValueErrors on bad inputs and return standard JSON responses instead of rendering HTML templates.
+Agent 2 (The QA Engineer): Generate a complete Bruno test collection (.bru files) for the updated POST /convert endpoint. Include a happy-path test for the number '1994' (MCMXCIV), and a negative test verifying the API gracefully handles an invalid string input like 'abc'.
+Agent 3 (The Code Reviewer): Write a brief, professional pull request summary explaining the exact logical flaws that were fixed in the Roman numeral algorithm and the security benefits of the new error handling.
